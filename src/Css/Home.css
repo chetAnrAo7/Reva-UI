@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Tangerine:wght@400;700&display=swap');
+
+.reva-landing {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  overflow: hidden;
+  padding: clamp(24px, 5vh, 56px) 20px;
+  color: #f5f8f3;
+  background: #0a110c;
+  font-family: 'DM Sans', sans-serif;
+  text-align: center;
+}
+
+.reva-cover-video,
+.reva-video-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.reva-cover-video {
+  z-index: -2;
+  object-fit: cover;
+  object-position: center;
+}
+
+.reva-video-overlay {
+  z-index: -1;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(5, 12, 7, 0.30) 0%,
+      rgba(5, 12, 7, 0.46) 45%,
+      rgba(5, 12, 7, 0.82) 100%
+    ),
+    radial-gradient(
+      ellipse at center,
+      rgba(5, 12, 7, 0.05) 0%,
+      rgba(5, 12, 7, 0.38) 100%
+    );
+}
+
+.reva-hero {
+  width: min(100%, 1050px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(22px, 3.5vh, 38px);
+  padding: 16px 0;
+  animation: reva-enter 900ms ease-out both;
+}
+
+.reva-brand-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(8px, 2.1vw, 30px);
+  width: 100%;
+  padding: 0 8px;
+}
+
+.reva-letter {
+  display: inline-block;
+  flex: 0 1 auto;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(5rem, 17vw, 13rem);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.075em;
+  color: transparent;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 5px 18px rgba(0, 0, 0, 0.16));
+}
+
+.reva-r {
+  background-image: url('/Photos/R.jpg');
+}
+
+.reva-e {
+  background-image: url('/Photos/E.jpg');
+}
+
+.reva-v {
+  background-image: url('/Photos/V.jpg');
+}
+
+.reva-a {
+  background-image: url('/Photos/A.jpg');
+}
+
+.reva-intro {
+  width: min(100%, 700px);
+}
+
+.reva-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-bottom: 18px;
+  color: #d0e7c6;
+  font-size: clamp(9px, 1vw, 11px);
+  font-weight: 700;
+  letter-spacing: clamp(1.5px, 0.35vw, 3px);
+}
+
+.reva-intro h1 {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(25px, 4vw, 46px);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+  text-shadow: 0 2px 22px rgba(0, 0, 0, 0.4);
+}
+
+.reva-tagline {
+  margin: 14px 0 0;
+  color: #e2edda;
+  font-family: 'Tangerine', cursive;
+  font-size: clamp(34px, 5vw, 57px);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.reva-description {
+  max-width: 510px;
+  margin: 14px auto 0;
+  padding: 0 8px;
+  color: rgba(245, 248, 243, 0.86);
+  font-size: clamp(12px, 1.35vw, 15px);
+  line-height: 1.9;
+  text-wrap: pretty;
+}
+
+.reva-get-started {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  min-width: 184px;
+  min-height: 54px;
+  padding: 15px 22px;
+  border: 1px solid rgba(218, 239, 208, 0.8);
+  border-radius: 5px;
+  background: rgba(19, 39, 24, 0.62);
+  color: #f5f8f3;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition:
+    background 200ms ease,
+    border-color 200ms ease,
+    transform 200ms ease;
+}
+
+.reva-get-started:hover {
+  background: #d0e7c6;
+  border-color: #d0e7c6;
+  color: #122017;
+  transform: translateY(-2px);
+}
+
+.reva-get-started:focus-visible {
+  outline: 2px solid #e3f5d9;
+  outline-offset: 5px;
+}
+
+.reva-footer-note {
+  margin: 0;
+  color: rgba(240, 246, 237, 0.66);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+@keyframes reva-enter {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  .reva-landing {
+    padding: max(24px, env(safe-area-inset-top))
+      20px
+      max(24px, env(safe-area-inset-bottom));
+  }
+
+  .reva-hero {
+    gap: clamp(26px, 5vh, 40px);
+  }
+
+  .reva-brand-mark {
+    gap: clamp(5px, 2vw, 12px);
+  }
+
+  .reva-letter {
+    font-size: clamp(4.3rem, 20vw, 7.5rem);
+    letter-spacing: -0.08em;
+  }
+
+  .reva-intro h1 {
+    font-size: clamp(25px, 7vw, 36px);
+    line-height: 1.3;
+  }
+
+  .reva-eyebrow {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+  }
+
+  .reva-description {
+    max-width: 350px;
+    line-height: 1.8;
+  }
+
+  .reva-get-started {
+    width: min(100%, 260px);
+    min-height: 52px;
+  }
+
+  .reva-footer-note {
+    font-size: 8px;
+    letter-spacing: 1.4px;
+  }
+}
+
+/* Short phone screens in landscape */
+@media (max-height: 500px) and (orientation: landscape) {
+  .reva-landing {
+    padding: 18px 24px;
+  }
+
+  .reva-hero {
+    gap: 14px;
+  }
+
+  .reva-letter {
+    font-size: clamp(3.5rem, 18vh, 6rem);
+  }
+
+  .reva-intro h1 {
+    font-size: clamp(22px, 5vh, 32px);
+  }
+
+  .reva-eyebrow {
+    margin-bottom: 8px;
+  }
+
+  .reva-tagline,
+  .reva-description,
+  .reva-footer-note {
+    display: none;
+  }
+
+  .reva-get-started {
+    min-height: 42px;
+    padding: 10px 20px;
+  }
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .reva-hero {
+    animation: none;
+  }
+
+  .reva-get-started {
+    transition: none;
+  }
+}
